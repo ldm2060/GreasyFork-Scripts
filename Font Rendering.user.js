@@ -16,8 +16,8 @@
 // @homepage           https://f9y4ng.github.io/GreasyFork-Scripts/
 // @homepageURL        https://f9y4ng.github.io/GreasyFork-Scripts/
 // @supportURL         https://github.com/F9y4ng/GreasyFork-Scripts/issues
-// @updateURL          https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Font%20Rendering.meta.js
-// @downloadURL        https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Font%20Rendering.user.js
+// @updateURL          https://github.com/ldm2060/GreasyFork-Scripts/raw/master/Font%20Rendering.meta.js
+// @downloadURL        https://github.com/ldm2060/GreasyFork-Scripts/raw/master/Font%20Rendering.user.js
 // @require            https://greasyfork.org/scripts/437214/code/frColorPicker.js?version=1167998#sha256-h43kKiwkTzM1MeblM1cGzIUn4NjUxMlGdJgxrhSbyLE=
 // @match              *://*/*
 // @grant              GM_getValue
@@ -1567,7 +1567,7 @@
 
       const refont = CONST_VALUES.fontSelect?.split(",")[0]?.replace(/"|'/g, "") ?? "";
       const fontface_i = CONST_VALUES.fontFace;
-      const fontFamily = fontface_i ? `font-family:var(--fr-font-family),var(--fr-init-basefont);` : ``;
+      const fontFamily = fontface_i ? `font-family:PingFang,var(--fr-font-family),var(--fr-init-basefont);` : ``;
       const fontFaces = fontface_i ? (refont ? await funcFontface(refont) : "") : "";
       let bodyScale = "";
       const fontScale = parseFloat(CONST_VALUES.fontSize);
@@ -2880,7 +2880,8 @@
           .filter(item => item !== t)
           .map(item => `@font-face{font-family:"${item}";src:local("${postscriptName}");}`)
           .join("");
-        return returnFontface;
+        const returnFontface1 = `@font-face{font-family:PingFang; src:local("PingFangSC-Regular"), local("PingFang SC"), url("//cdn.jsdelivr.net/gh/ldm2060/staticlib@main/pingfang.woff") format('woff'), url("https://cdn.jsdelivr.net/gh/ldm2060/staticlib@main/pingfang.woff") format('woff')}`;
+        return returnFontface + returnFontface1;
       }
 
       function funcFontsize(t) {
@@ -3531,7 +3532,7 @@
                 const _stroke = fstroke > 0 && fstroke <= 1.0 ? `-webkit-text-stroke:var(--fr-font-stroke);` : ``;
                 const _smoothing = smooth ? funcSmooth : "";
                 const _textrender = smooth ? "text-rendering:optimizeLegibility;" : "";
-                const _fontfamily = fontface ? `font-family:var(--fr-font-family),var(--fr-init-basefont);` : ``;
+                const _fontfamily = fontface ? `font-family:PingFang,var(--fr-font-family),var(--fr-init-basefont);` : ``;
                 const _refont = fontselect?.split(",")[0].replace(/"|'/g, "") ?? "";
                 const _fontfaces = !fontface ? "" : _refont ? await funcFontface(_refont) : "";
                 const _exselector = CAN_I_USE ? `:is(${convertHtmlToText(fontex)})` : convertHtmlToText(fontex);
