@@ -16,14 +16,12 @@
 - 脚本错误、异常请反馈至{[Issues](https://github.com/F9y4ng/GreasyFork-Scripts/issues)}, 字体、渲染样式、乱码问题请反馈至{[Discussions](https://github.com/F9y4ng/GreasyFork-Scripts/discussions/categories/%E9%97%AE%E7%AD%94%E4%B8%93%E5%8C%BA-question-answer)}。
 - 为保证您的数据安全，请及时备份您的本地数据！请勿使用来源未知的备份文件。
 
-## version 2023.05.06.1 - 更新日志： 【🔥[安装此脚本](https://github.com/ldm2060/GreasyFork-Scripts/raw/master/Font%20Rendering.user.js)】
+## version 2023.06.17.1 - 更新日志： 【🔥[安装此脚本](https://github.com/ldm2060/GreasyFork-Scripts/raw/master/Font%20Rendering.user.js)】
 
 ```log
-+ 新增自定义排除渲染网址的管理功能，具体功能请查阅脚本使用说明。
-+ 新增自定义等宽字体开关，默认关闭需手动在自定义等宽字体界面开启。
-@ 优化全局样式的预定义内容及样式加载的逻辑与效率。
-@ 修正window.find()非标方法在ShadowRoot中无效的Bug.
-@ 修正Github:Feature preview中代码预览功能的样式Bug.
+- 由于字体热替换的兼容性问题，删除中文引号的样式。
+@ 尝试修复粗体修正功能因未知条件造成无限循环的问题。
+@ 优化对扩展Darkreader的兼容性，提升页面加载速度。
 @ 修正一些已知的小问题，优化样式，优化代码。
 ```
 
@@ -35,11 +33,19 @@
 
 > ##### 注：在 WIN10 系统下，不论高分屏或低分屏，系统或浏览器应用 150%以上的缩放率可获得最佳的渲染效果，这是 WIN10 默认字体渲染所导致的。
 
+## 关于脚本加载延迟的处理办法
+
+**升级至TM4.19.0、VM2.14.0正式版后，如出现脚本加载延迟、或未正确加载样式的临时处理办法：**
+
+* 针对**Tampermonkey**：进入**管理面板**，进入**设置**标签页，下拉至“**实验**”，将注入模式改为“**即时**”。
+* 针对**Violentmonkey**：进入**控制台界面**，进入**设置**标签页，在**高级-通用**中勾选“**同步 page 模式**”。
+* 若以上设置仍不起作用，请将TM、VM扩展删除后重新安装，再重启浏览器后重试。
+
 ## 关于问题反馈
 
 **注意**：使用浏览器或脚本管理器的`Beta`、`Dev`、`Canary`、`Nightly`等测试分支版本有可能造成未知的兼容性问题或异常错误，本脚本不会针对测试版本产生的错误进行修正，**对于必须使用测试版本并对脚本处理效果有极高要求的用户，建议你停用本脚本选择其他同类脚本**。因有极小概率发生因数据兼容性错误造成本地数据被异常初始化，**为确保数据安全，请及时且定期备份您的本地数据。**
 
-请反馈问题的朋友注意：反馈脚本错误或样式显示问题，请把**仅使用本脚本的情况下**发生问题的**具体访问网址**、使用的**浏览器版本**、**脚本运行器版**、**相关错误的截图**、以及**具体操作流程**或**错误提示**（如果有的话）发出来，你遇到的问题不一定能在其他地方复现。
+请反馈问题的朋友注意：反馈脚本错误或样式显示问题，请把**仅使用本脚本的情况下**发生问题的**具体访问网址**、使用的**浏览器版本**、**脚本管理器版本**、**相关错误的截图**、以及**具体操作流程**或**错误提示**（如果有的话）发出来，你遇到的问题不一定能在其他地方复现。
 
 - [关于个别网站样式错误修正的设置分享，不定期更新，自取自用。](https://github.com/F9y4ng/GreasyFork-Scripts/discussions/42)
 - [分享：关于分别设置英文字体和中文字体的方法。](https://github.com/F9y4ng/GreasyFork-Scripts/discussions/83)
@@ -78,7 +84,7 @@
 
 - **已知问题一：** 由于 Firefox(Gecko 内核)的兼容性原因，仅修正了脚本内部坐标偏移问题，但会对部分网站样式、功能兼容不足，造成样式错乱、页面动作缺失等问题，请根据实际需求酌情使用。**强烈建议您**：使用 Firefox 浏览器自身缩放功能替代(`Ctrl++`, `Ctrl+-`)。
 - **已知问题二：** 针对视口单位 `vw, vh, vmin, vmax` 的修正已完成，解决了在字体缩放后视口单位长度不准确的问题。该功能为**实验性功能**，在核心高级功能中默认开启。在日常使用时，遇到以下特殊情况的处理方法：
-  1. 部分站点由于未配置 CORS 策略，会使浏览器阻止对外部样式的获取（控制台 console 会看到相应报错，如：`No 'Access-Control-Allow-Origin' header is present on the requested resource.`），此时，可在扩展商店安装并开启 [Allow CORS: Access-Control-Allow-origin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf)。
+  1. 部分站点因配置相关 CORS 策略，会使浏览器阻止对外部样式的获取（控制台 console 会看到相应报错，如：`No 'Access-Control-Allow-Origin' header is present on the requested resource.`），此时，可在扩展商店安装并开启 [Allow CORS: Access-Control-Allow-origin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf)。
   2. 在部分应用了 CSP 策略的站点，浏览器可能会阻止内部样式的加载和解析（控制台 console 会看到相应的报错，如：`Refused to apply inline style because it violates the following Content Security Policy directive: "default-src 'self'".`），此时，可在扩展商店安装并开启 [Allow CSP: Content-Security-Policy](https://chrome.google.com/webstore/detail/allow-csp-content-securit/hnojoemndpdjofcdaonbefcfecpjfflh)
   3. 使用其他同类扩展也可解决以上问题，如介意安全问题、或有其他顾虑、或不想使用该功能，请在高级核心功能设置中关闭**视口单位修正选项**或**字体缩放功能选项**，或将字体缩放设置为 `1.0` 后保存为站点独享数据。
 - **未知情况：** 如遇到其他状况下的样式异常、坐标偏移，或其他相关问题，请及时向我[反馈](https://github.com/F9y4ng/GreasyFork-Scripts/issues)。
@@ -92,18 +98,19 @@
 - [新手上路，请使用前仔细阅读脚本使用说明，以及当前页面内相关注意事项。](https://github.com/F9y4ng/GreasyFork-Scripts/wiki/%E4%BC%98%E9%9B%85%E7%9A%84%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%B7%B3%E8%BD%AC%E5%8A%A9%E6%89%8B)
 - 自动更新检测默认开启，如无更新提示需求，可在“功能设置开关”中关闭它。
 
-## version 2023.05.13.1 - 更新日志： 【🔥 [安装此脚本](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Google%20%26%20Baidu%20Switcher.user.js)】
+## version 2023.06.10.1 - 更新日志： 【🔥 [安装此脚本](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Google%20%26%20Baidu%20Switcher.user.js)】
 
 ```log
-@ 优化Bing.com的链接属性颜色。
-@ 更新Yandex.com/Yandex.ru的广告过滤规则。
++ 新增Yahoo.com搜索引擎，删除Neeva搜索。
+@ 修正Google search labs界面的按钮问题。
+@ 优化脚本操作界面的兼容性，提升操作体验。
 @ 修正一些小问题，优化样式，优化代码。
 ```
 
 ## 最新功能介绍
 
 - 新增去除搜索结果及侧栏广告功能。
-- 新增自定义搜索引擎选取功能（包含：百度、Google、Bing、Duckduckgo、搜狗、F 搜、Yandex、360 搜索、头条搜索、百度开发者、Ecosia、Neeva、You、Startpage 搜索等常见的搜索引擎）
+- 新增自定义搜索引擎选取功能（包含：百度、Google、Bing、Duckduckgo、搜狗、F 搜、Yandex、360 搜索、头条搜索、百度开发者、Ecosia、Yahoo、You、Startpage、Brave搜索等常见的搜索引擎）
 - 新增搜索结果链接去重定向功能。
 - 更智能的更新检测功能。
 
@@ -111,5 +118,5 @@
 
 新版本“**自动更新**”功能默认开启，如不需要更新检测，请在脚本菜单“功能设置开关”中，关闭 **更新检测** 即可。
 
-- 请反馈问题的朋友注意：反馈脚本错误或样式显示问题，请把发生问题的**具体访问网址**、使用的**浏览器版本**、**脚本运行器版**、**相关错误的截图**（仅开本脚本的情况下的）、以及**具体操作流程**或**错误提示**（如果有的话）发出来，你遇到的问题不一定能在其他地方复现。
+- 请反馈问题的朋友注意：反馈脚本错误或样式显示问题，请把发生问题的**具体访问网址**、使用的**浏览器版本**、**脚本管理器版本**、**相关错误的截图**（仅开本脚本的情况下的）、以及**具体操作流程**或**错误提示**（如果有的话）发出来，你遇到的问题不一定能在其他地方复现。
 - 一般来说，最新及测试版的发布将在**Github**进行，**GreasyFork**会在 24 小时内自动同步。已开启自动更新检测功能的用户，客户端代码会根据更新频率设置进行自动更新。
