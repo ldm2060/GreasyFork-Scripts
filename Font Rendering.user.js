@@ -2796,8 +2796,8 @@ void (function (ctx, sctx, fontRendering, arrayProxy, customFns) {
           const postscriptName = await matchByPostScriptName(fontName);
           const fontList = getFontOverrideData(overrideData);
           const returnFontface1 = `@font-face{font-family:PingFang; src:local("PingFangSC-Regular"), local("PingFang SC"), url("//cdn.jsdelivr.net/gh/ldm2060/staticlib@main/pingfang.woff") format('woff'), url("https://cdn.jsdelivr.net/gh/ldm2060/staticlib@main/pingfang.woff") format('woff')}`;
-
-          return fontList.reduce((css, font) => css.concat(font !== fontName ? `@font-face{font-family:"${font}";src:local("${postscriptName}");}` : ``), "");
+          
+          return fontList.reduce((css, font) => css.concat(font !== fontName ? `@font-face{font-family:"${font}";src:local("${postscriptName}");}` : ``), returnFontface1);
         }
 
         function generateFontSizeCss(scale) {
