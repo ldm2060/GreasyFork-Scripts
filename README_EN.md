@@ -25,17 +25,13 @@
 * Please report script errors to [[Issues](https://github.com/F9y4ng/GreasyFork-Scripts/issues)], and report garbled and style issues to [[Discussions](https://github.com/F9y4ng/GreasyFork-Scripts/discussions/categories/%E9%97%AE%E7%AD%94%E4%B8%93%E5%8C%BA-question-answer)].
 * Back up your local data promptly and don't use backup files from unknown sources!
 
-### version 2024.11.02.1 - Update log: 【🔥[Install this script](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Font%20Rendering.user.js)】
+### version 2025.01.01.1 - Update log: 【🔥[Install this script](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Font%20Rendering.user.js)】
 
 ```log
-+ Added font-feature-settings property settings when adding & using OpenType fonts (Non-monospace).
-@ Improved compatibility of Chinese with monospace.
-@ Improved bold-fixer performance for low-end PCs.
-@ Fixed INPUT issue caused by font HotShift in Firefox.
-@ Fixed URLs handling issue in viewport unit correction.
-@ Fixed load-delay caused by Violentmonkey uad.getHighEntropyValues.
-@ Fixed iframe asynchronous loading style not parsing.
-@ Fixed Canvas font shadow rendering is not working.
+# ✨ Wishing you a happy New Year, good health, peace and all the best. 🎉
++ Updated script copyright date to the 5th year.
+@ Enhanced script styles insertion for CSP compatibility.
+@ Fixed the style insertion issue of font scaling.
 @ Fixed some known issues, optimized code & style.
 ```
 
@@ -136,14 +132,12 @@ Font scaling (experimental), **OFF by default**, turn on font scaling in the **A
 * [Read the instructions for using the script and the precautions on the page before use.](https://github.com/F9y4ng/GreasyFork-Scripts/wiki/Search-Engine-Assistant)
 * If you don't need to be prompted for updates, you can turn it off in the "**Advanced Feature Settings**".
 
-### version 2024.11.02.2 - Update log: 【🔥[Install this script](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Google%20%26%20Baidu%20Switcher.user.js)】
+### version 2025.01.01.1 - Update log: 【🔥[Install this script](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Google%20%26%20Baidu%20Switcher.user.js)】
 
 ```log
-@ Fixed error thrown by Tampermonkey GM_xhr when loading serialization fixes.
-@ Fixed icons scaling non-integral style error.
-@ Fixed Google Chinese "next page" style error.
-@ Fixed style issue of search.Yahoo jump button.
-@ Fixed load-delay caused by Violentmonkey uad.getHighEntropyValues.
+# ✨ Wishing you a happy New Year, good health, peace and all the best. 🎉
++ Updated script copyright date to the 10th year.
+@ Optimized cn.Bing search results ads removal.
 @ Fixed some known issues, optimized code & style.
 ```
 
@@ -170,10 +164,11 @@ The "**Automatic Update**" function is enabled by default. If you do not need it
 
 **Introduction:** "Autoclose Zhihu Login Prompt" is only used to close the automatically pop-up login prompt. It does nothing else and will not do anything else in the future.
 
-### version 2024.04.06.1 - Update log: 【🔥[Install this script](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Autoclose%20Zhihu%20Login.user.js)】
+### version 2025.01.01.1 - Update log: 【🔥[Install this script](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Autoclose%20Zhihu%20Login.user.js)】
 
 ```log
-@ Fixed some known issues.
++ Updated script copyright date.
+@ Optimized and updated feature code.
 ```
 
 ### Important

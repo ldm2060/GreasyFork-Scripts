@@ -25,17 +25,13 @@
 - 脚本错误、异常请反馈至{[Issues](https://github.com/F9y4ng/GreasyFork-Scripts/issues)}, 字体、渲染样式、乱码问题请反馈至{[Discussions](https://github.com/F9y4ng/GreasyFork-Scripts/discussions/categories/%E9%97%AE%E7%AD%94%E4%B8%93%E5%8C%BA-question-answer)}。
 - 为保证您的数据安全，请及时备份您的本地数据！请勿使用来源未知的备份文件。
 
-### version 2024.11.02.1 - 更新日志： 【🔥[安装此脚本](https://github.com/ldm2060/GreasyFork-Scripts/raw/master/Font%20Rendering.user.js)】
+### version 2025.01.01.1 - 更新日志： 【🔥[安装此脚本](https://github.com/ldm2060/GreasyFork-Scripts/raw/master/Font%20Rendering.user.js)】
 
 ```log
-+ 新增使用 OpenType 字体（非等宽字体）时在自定义字体工具中新增 font-feature-settings 属性的设置项目。
-@ 改进英文等宽字体与中文字体混合渲染的兼容性。
-@ 针对低配置电脑大幅提升粗体修正功能的执行效率。
-@ 修复在 Firefox 因字体热替换导致的 INPUT 标签异常。
-@ 修复视口单位修正中 URLs 处理的相关函数错误。
-@ 修复 Violentmonkey uad.getHighEntropyValues 引起的加载延迟。
-@ 修复 iframe 异步加载时插入样式没有正确解析的问题。
-@ 修复 Canvas 画布字体阴影渲染效果未生效的问题。
+# ✨ 恭祝新年快乐，身体健康、平安如意、事事顺心。🎉
++ 年度更新脚本版权日期信息，已经服务 5 年啦！
+@ 增强脚本渲染样式 DOM 插入以实现 CSP 兼容性。
+@ 修复字体比例缩放功能样式插入的错误。
 @ 修复一些已知的问题，优化代码，优化样式。
 ```
 
@@ -128,14 +124,12 @@
 - [新手上路，请使用前仔细阅读脚本使用说明，以及当前页面内相关注意事项。](https://github.com/F9y4ng/GreasyFork-Scripts/wiki/%E4%BC%98%E9%9B%85%E7%9A%84%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%8A%A9%E6%89%8B)
 - 自动更新检测默认开启，如无更新提示需求，可在“**搜索引擎助手高级设置**”中关闭它。
 
-### version 2024.11.02.2 - 更新日志： 【🔥 [安装此脚本](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Google%20%26%20Baidu%20Switcher.user.js)】
+### version 2025.01.01.1 - 更新日志： 【🔥 [安装此脚本](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Google%20%26%20Baidu%20Switcher.user.js)】
 
 ```log
-@ 修正 Tampermoneky GM_xhr 加载序列化修复时引发的错误。
-@ 修正站点图标在非整比缩放时的样式错误。
-@ 修正 Google 中文“下一页”的样式错误。
-@ 修正 search.Yahoo 跳转按钮的样式问题。
-@ 修正 Violentmonkey uad.getHighEntropyValues 造成的加载延迟。
+# ✨ 恭祝大家新年快乐，身体健康、平安如意。🎉
++ 年度更新脚本版权日期信息，已服务 10 年啦！
+@ 优化 cn.Bing 搜索结果广告的移除规则。
 @ 修正一些已知问题，优化代码，优化样式。
 ```
 
@@ -163,10 +157,11 @@
 
 简介：自动关闭知乎登录提示，仅仅用于关闭自动弹出的登录提示，不干别的，未来也不会去干别的。
 
-### version 2024.04.06.1 - 更新日志： 【🔥 [安装此脚本](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Autoclose%20Zhihu%20Login.user.js)】
+### version 2025.01.01.1 - 更新日志： 【🔥 [安装此脚本](https://github.com/F9y4ng/GreasyFork-Scripts/raw/master/Autoclose%20Zhihu%20Login.user.js)】
 
 ```log
-@ 修正一些已知的问题。
++ 更新脚本版权日期信息。
+@ 优化更新功能代码。
 ```
 
 ### 重要说明
